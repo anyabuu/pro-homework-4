@@ -1,37 +1,24 @@
 const first_num = prompt('Please, enter first number');
 const second_num = prompt('Please, enter second number');
 const operation = prompt('Please, choose operation + - * /');
+let result;
 
-if (operation === "+") {
-    calcSum(first_num, second_num)
-} else if (operation === "-") {
-    calcSub(first_num, second_num)
-} else if (operation === "*") {
-    calcMulti(first_num, second_num)
-} else if (operation === "/") {
-    calcDiv(first_num, second_num)
-} else {
-    alert("You`ve chosen incorrect operation!")
-}
+textResult(first_num, second_num);
 
-function calcSum(first_num, second_num) {
-    const result = Number(first_num) + Number(second_num);
-    console.log(`Result: ${first_num} + ${second_num} = ${result}`);
-}
+function textResult(first_num, second_num) {
+   if (operation === "+") {
+        result = Number(first_num) + Number(second_num);
+    } else if (operation === "-") {
+        result = Number(first_num) - Number(second_num);
+    } else if (operation === "*") {
+        result = Number(first_num) * Number(second_num);
+    } else if (operation === "/") {
+        result = Number(first_num) / Number(second_num);
+    } else {
+        return alert("You`ve chosen incorrect operation!");
+    }
 
-function calcSub(first_num, second_num) {
-    const result = Number(first_num) - Number(second_num);
-    console.log(`Result: ${first_num} - ${second_num} = ${result}`);
-};
-
-function calcMulti(first_num, second_num) {
-    const result = Number(first_num) * Number(second_num);
-    console.log(`Result: ${first_num} * ${second_num} = ${result}`);
-};
-
-function calcDiv(first_num, second_num) {
-    const result = Number(first_num) / Number(second_num);
-    console.log(`Result: ${first_num} / ${second_num} = ${result}`);
+  console.log(`Result: ${first_num} ${operation} ${second_num} = ${result}`);
 }
 
 
